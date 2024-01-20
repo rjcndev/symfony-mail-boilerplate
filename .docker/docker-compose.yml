@@ -20,3 +20,9 @@ services:
     ports:
       - 1025:1025 # smtp server
       - 8025:8025 # web ui
+
+  composer:
+    image: composer/composer
+    volumes:
+      - ../:/app
+    command: install
